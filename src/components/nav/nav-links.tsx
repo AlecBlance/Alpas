@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
-import { ModeToggle } from "../ui/mode-toggle";
+import { buttonVariants } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const NavLinks = () => {
   return (
