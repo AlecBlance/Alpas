@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <div className="text-lg font-medium flex font-semibold">
+    <div className="text-lg flex font-semibold">
       <svg
         width="24"
         height="24"
