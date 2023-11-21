@@ -1,18 +1,17 @@
 import Image from "next/image";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Project = () => {
   return (
     <div>
-      <div>
+      <AspectRatio ratio={16 / 9}>
         <Image
           src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/61cda4144528885.Y3JvcCw4NzksNjg3LDI3NCw1OA.png"
           alt="Image"
-          className="w-full object-cover object-center rounded-md"
-          width={0}
-          height={0}
-          sizes="100vw"
+          className="object-cover rounded-md"
+          fill
         />
-      </div>
+      </AspectRatio>
       <small className="text-sm font-medium leading-none ">
         Sample Project
       </small>
