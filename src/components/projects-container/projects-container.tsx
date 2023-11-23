@@ -1,20 +1,14 @@
+import { FetchedProjects } from "@/types";
 import Project from "./project";
+import { fetchProjects } from "@/actions/fetch-projects";
 
-const ProjectsContainer = () => {
+const ProjectsContainer = async () => {
+  const projects: FetchedProjects = await fetchProjects("case study", "", "");
   return (
     <div className="grid grid-cols-1 gap-4 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      {projects.projects.map((project) => (
+        <Project key={project.url} project={project} />
+      ))}
     </div>
   );
 };

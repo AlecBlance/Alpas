@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/dialog";
 import { Button, buttonVariants } from "../ui/button";
 import Link from "next/link";
+import { Project as ProjectType } from "@/types";
 
-const Project = () => {
+const Project = ({ project }: { project: ProjectType }) => {
   return (
     <div className="">
       <Dialog>
@@ -20,7 +21,7 @@ const Project = () => {
             <div className="absolute inset-0 hover:bg-primary/20 rounded-md z-10 ease-in-out transition-all"></div>
             <AspectRatio ratio={16 / 9} className="hover:bg-red-700 rounded-md">
               <Image
-                src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/61cda4144528885.Y3JvcCw4NzksNjg3LDI3NCw1OA.png"
+                src={project.image}
                 alt="Image"
                 className="object-cover rounded-md"
                 fill
@@ -28,23 +29,37 @@ const Project = () => {
             </AspectRatio>
           </div>
         </DialogTrigger>
-        <small className="text-sm font-medium leading-none ">
-          Sample Project
-        </small>
-        <p className="text-xs text-muted-foreground">Alec Blance</p>
+        <p className="text-sm font-medium leading-none py-2">{project.name}</p>
+        <p className="text-xs text-muted-foreground">
+          {project.owners.map((owner) => owner.displayName).join(", ")}
+        </p>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Sample Project</DialogTitle>
+            <DialogTitle>{project.name}</DialogTitle>
             <DialogDescription>
               <div>
                 <p className="mb-5">Select your desired project link.</p>
                 <div className="flex flex-wrap gap-2">
                   <Button asChild>
-                    <Link href="/">Behance</Link>
+                    <Link
+                      href={project.url}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Behance
+                    </Link>
                   </Button>
-                  <Button asChild>
-                    <Link href="/">Figma</Link>
-                  </Button>
+                  {project.figmaUrl.map((figma) => (
+                    <Button key={figma} asChild>
+                      <Link
+                        href={figma}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Figma
+                      </Link>
+                    </Button>
+                  ))}
                 </div>
               </div>
             </DialogDescription>
