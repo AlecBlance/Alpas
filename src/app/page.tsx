@@ -8,7 +8,6 @@ export default async function Home({
 }: {
   searchParams: { [key: string]: string | "" };
 }) {
-  console.log("hey");
   return (
     <div className="px-3 py-6 flex-grow">
       <div className="max-w-5xl mx-auto space-y-6">
