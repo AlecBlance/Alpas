@@ -6,10 +6,10 @@ const SearchContainer = () => {
   return (
     <div className="max-w-xl mx-auto space-y-2">
       <Search />
-      <div className="space-y-2 xs:space-x-2 xs:space-y-0">
+      {/* <div className="space-y-2 xs:space-x-2 xs:space-y-0">
         <Sort />
         <Filter />
-      </div>
+      </div> */}
     </div>
   );
 };
