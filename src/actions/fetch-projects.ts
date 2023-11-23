@@ -67,7 +67,7 @@ const fetchProjects = async (
         name,
         url,
         owners,
-        covers: { size_404_webp },
+        covers: { size_max_808_webp },
       } = project;
       previousProjectsLength += 1;
       pages = 0;
@@ -75,7 +75,7 @@ const fetchProjects = async (
         name,
         url,
         owners,
-        image: size_404_webp.url,
+        image: size_max_808_webp.url,
         figmaUrl: filteredModules,
       });
     }

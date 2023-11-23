@@ -16,7 +16,7 @@ interface Node {
   name: string;
   url: string;
   owners: { displayName: string }[];
-  covers: { size_404_webp: { url: string } };
+  covers: { size_max_808_webp: { url: string } };
   allModules: { originalEmbed: string }[];
 }
 

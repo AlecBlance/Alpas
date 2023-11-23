@@ -23,7 +23,7 @@ query GetProjectSearchResults($query: query, $filter: SearchResultFilter, $first
           displayName
         }
         covers {
-          size_404_webp {
+          size_max_808_webp {
             url
           }
         }
