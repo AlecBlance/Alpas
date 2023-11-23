@@ -79,11 +79,11 @@ const fetchProjects = async (
         figmaUrl: filteredModules,
       });
     }
-  } while (
-    hasNextPage &&
-    projects.length < 20 &&
-    !(pages == 5 && projects.length == previousProjectsLength)
-  );
+    if (pages == 5 && projects.length == previousProjectsLength) {
+      hasNextPage = false;
+      break;
+    }
+  } while (hasNextPage && projects.length < 20);
   return {
     hasNextPage,
     after,
