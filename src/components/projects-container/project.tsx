@@ -25,6 +25,8 @@ const Project = ({ project }: { project: ProjectType }) => {
                 alt="Image"
                 className="object-cover rounded-md"
                 fill
+                sizes="640w"
+                priority
               />
             </AspectRatio>
           </div>
@@ -48,6 +50,8 @@ const Project = ({ project }: { project: ProjectType }) => {
                     alt="Image"
                     className="object-cover rounded-md"
                     fill
+                    sizes="640w"
+                    priority
                   />
                 </AspectRatio>
                 <div className="flex flex-wrap gap-2">
