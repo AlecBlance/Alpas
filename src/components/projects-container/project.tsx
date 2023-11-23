@@ -8,6 +8,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Button, buttonVariants } from "../ui/button";
+import Link from "next/link";
 
 const Project = () => {
   return (
@@ -32,10 +34,19 @@ const Project = () => {
         <p className="text-xs text-muted-foreground">Alec Blance</p>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+            <DialogTitle>Sample Project</DialogTitle>
             <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              <div>
+                <p className="mb-5">Select your desired project link.</p>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild>
+                    <Link href="/">Behance</Link>
+                  </Button>
+                  <Button asChild>
+                    <Link href="/">Figma</Link>
+                  </Button>
+                </div>
+              </div>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
