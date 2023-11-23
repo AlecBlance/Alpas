@@ -39,6 +39,17 @@ const Project = ({ project }: { project: ProjectType }) => {
             <DialogDescription>
               <div>
                 <p className="mb-5">Select your desired project link.</p>
+                <AspectRatio
+                  ratio={16 / 9}
+                  className="hover:bg-red-700 rounded-md mb-5"
+                >
+                  <Image
+                    src={project.image}
+                    alt="Image"
+                    className="object-cover rounded-md"
+                    fill
+                  />
+                </AspectRatio>
                 <div className="flex flex-wrap gap-2">
                   <Button asChild>
                     <Link
