@@ -26,7 +26,7 @@
 <img src="public/alpas.png" alt="Logo">
 </center>
 
-Stunning designs with good assets makes the developer and designer professional and skilled. Searching for these resources is difficult that is why I created Alpas. Alpas helps you search for Behance-uploaded designs with figma prototype for easier designing, web developing, and retrieving of assets.
+Stunning designs with good assets makes the developer and designer professional and skilled. Searching for these resources is difficult that is why I created Alpas. Alpas in Filipino is <i>"to break free"</i>. Alpas helps you search for Behance-uploaded designs with figma prototype for easier designing, web developing, and retrieving of assets.
 
 ### Built With
 
