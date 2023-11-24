@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Logo from "@/components/ui/logo";
 
 const About = () => {
@@ -54,6 +55,10 @@ const About = () => {
           than Behance. Behance is the go-to platform of designers for
           displaying their designs. There is currently no filter for Figma
           prototype in Behance, so this small problem can be patched by Alpas.
+        </p>
+        <br />
+        <p>
+          Alpas - a Filipino word that means <i>"to break free".</i>
         </p>
         <br />
         <p className="indent-8">
