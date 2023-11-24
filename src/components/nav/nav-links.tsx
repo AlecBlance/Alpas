@@ -11,11 +11,6 @@ const NavLinks = () => {
         </Link>
       </li>
       <li>
-        <Link href="/api" className={buttonVariants({ variant: "ghost" })}>
-          API
-        </Link>
-      </li>
-      <li>
         <ModeToggle />
       </li>
     </ul>
