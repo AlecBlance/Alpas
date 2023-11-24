@@ -118,6 +118,11 @@ const Footer = () => {
               <p className="font-bold">Pages</p>
               <ul className="text-sm space-y-2 pt-2 text-muted-foreground">
                 <li>
+                  <Link href="/" className="hover:underline">
+                    Home
+                  </Link>
+                </li>
+                <li>
                   <Link href="/about" className="hover:underline">
                     About
                   </Link>
