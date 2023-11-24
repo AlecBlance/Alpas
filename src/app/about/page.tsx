@@ -64,7 +64,7 @@ const About = () => {
         </p>
         <br />
         <br />
-        <div className="flex justify-end text-white font-bold text-xl">
+        <div className="flex justify-end text-secondary-foreground font-bold text-xl">
           <p className="underline decoration-wavy decoration-primary">- Alec</p>
         </div>
       </div>
