@@ -118,19 +118,8 @@ const Footer = () => {
               <p className="font-bold">Pages</p>
               <ul className="text-sm space-y-2 pt-2 text-muted-foreground">
                 <li>
-                  <Link
-                    href="mailto:blancealec1@gmail.com"
-                    className="hover:underline"
-                  >
+                  <Link href="/about" className="hover:underline">
                     About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.linkedin.com/in/alecblance/"
-                    className="hover:underline"
-                  >
-                    API
                   </Link>
                 </li>
               </ul>
