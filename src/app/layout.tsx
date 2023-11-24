@@ -14,7 +14,7 @@ export const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Alpas",
-  description: "Search for Figma Prototypes in Behance using Alpas.",
+  description: "A search engine that scrapes Behance for Figma prototypes.",
 };
 
 export default function RootLayout({
