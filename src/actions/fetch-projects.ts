@@ -13,6 +13,7 @@ const fetchProjects = async (
   let projects: Project[] = [];
   let previousProjectsLength = 0;
   let pages = 0;
+  let startTime = Date.now();
 
   const getProjects = async () => {
     const variables: Variables = {
@@ -83,7 +84,7 @@ const fetchProjects = async (
       hasNextPage = false;
       break;
     }
-  } while (hasNextPage && projects.length < 20);
+  } while (hasNextPage && Date.now() - startTime < 9000);
   return {
     hasNextPage,
     after,
