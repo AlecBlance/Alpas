@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
-
+import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -18,6 +19,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { useRouter } from "next/navigation";
 
 const sort = [
   {
@@ -49,6 +51,13 @@ const sort = [
 const Sort = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const search = searchParams.get("search");
+    router.push(`${search ? `?search=${search}&` : "?"}sort=${value}`);
+  }, [router, searchParams, value]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -57,7 +66,7 @@ const Sort = () => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="max-xs:w-full justify-between sm:max-w-[200px]"
+          className="justify-between max-xs:w-full sm:max-w-[200px]"
         >
           {value ? sort.find((sort) => sort.value === value)?.label : "Sort"}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
