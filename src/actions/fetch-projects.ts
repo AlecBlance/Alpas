@@ -84,7 +84,11 @@ const fetchProjects = async (
       hasNextPage = false;
       break;
     }
-  } while (hasNextPage && Date.now() - startTime < 9000);
+  } while (
+    hasNextPage &&
+    Date.now() - startTime < 9000 &&
+    projects.length < 10
+  );
   return {
     hasNextPage,
     after,
